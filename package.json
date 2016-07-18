@@ -8,7 +8,7 @@
     "inline-styles",
     "aphrodite"
   ],
-  "main": "lib/index.js",
+  "main": "dist/angular-aphrodite.js",
   "scripts": {
     "prebuild": "rimraf dist lib",
     "build": "npm-run-all --parallel build:*",
