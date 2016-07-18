@@ -1,6 +1,6 @@
 {
   "name": "angular-aphrodite",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "Inline styles in Angular that just work (TM)",
   "keywords": [
     "css",
