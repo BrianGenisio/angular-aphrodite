@@ -40,6 +40,22 @@ $scope.styles = StyleSheet.create({
 <span css="[styles.blue, styles.small]">This is blue and small.</span>
 ```
 
+## Template Style Definitions
+Alternatively, you can define the styles in the template instead of the JavaScript.  If you choose to do it this way, *you must use JSON syntax*:
+
+```html
+<stylesheet name="templateStyle">
+  {
+    "red": {
+      "backgroundColor": "red"
+    }
+  }
+</stylesheet>
+
+<span ng-class="templateStyle.red | css">red stuff</span>
+<span css="templateStyle.red">red stuff</span>
+```
+
 ## CommonJS Bootstrapping
 *JS:*
 ```js

@@ -3,8 +3,16 @@
 
     <img src="img/logo.png">
 
+    <stylesheet name="templateStyle">
+        {
+            "red": {
+                "backgroundColor": "red"
+            }
+        }
+    </stylesheet>
+
     <div>
-        <span ng-class="styles.red | css">
+        <span ng-class="templateStyle.red | css">
             This is red.
         </span>
         <span css="styles.hover">

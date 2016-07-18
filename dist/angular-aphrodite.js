@@ -95,7 +95,22 @@ module.exports =
 	    };
 	}
 
-	_angular2['default'].module(MODULE_NAME, []).filter('css', cssFilter).directive('css', cssDirective);
+	function stylesheetDirective() {
+	    return {
+	        restrict: 'E',
+	        link: function link(scope, element, attrs) {
+	            var text = element.text();
+	            element.remove();
+
+	            var dataName = attrs.name;
+	            var data = JSON.parse(text);
+
+	            scope[dataName] = _aphrodite.StyleSheet.create(data);
+	        }
+	    };
+	}
+
+	_angular2['default'].module(MODULE_NAME, []).filter('css', cssFilter).directive('css', cssDirective).directive('stylesheet', stylesheetDirective);
 
 	exports['default'] = MODULE_NAME;
 	module.exports = exports['default'];

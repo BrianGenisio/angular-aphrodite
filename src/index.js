@@ -30,8 +30,24 @@ function cssDirective() {
     }
 }
 
+function stylesheetDirective() {
+    return {
+        restrict: 'E',
+        link: function(scope, element, attrs) {
+            const text = element.text();
+            element.remove();
+            
+            const dataName = attrs.name;
+            const data = JSON.parse(text);
+            
+            scope[dataName] = StyleSheet.create(data);
+        }
+    };
+}
+
 angular.module(MODULE_NAME, [])
     .filter('css', cssFilter)
-    .directive('css', cssDirective);
+    .directive('css', cssDirective)
+    .directive('stylesheet', stylesheetDirective);
 
 export default MODULE_NAME;
