@@ -10,7 +10,7 @@
   "license": "MIT",
   "dependencies": {
     "angular": "^1.5.7",
-    "angular-aphrodite": "0.0.2",
+    "angular-aphrodite": "^0.0.6",
     "aphrodite": "^0.4.1"
   },
   "devDependencies": {
