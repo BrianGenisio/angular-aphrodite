@@ -1,0 +1,19 @@
+{
+  "name": "umd",
+  "version": "0.0.0",
+  "description": "A UMD example of using Angular bindings for Aphrodite",
+  "main": "index.html",
+  "scripts": {
+    "start": "http-server"
+  },
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "angular": "^1.5.7",
+    "angular-aphrodite": "0.0.2",
+    "aphrodite": "^0.4.1"
+  },
+  "devDependencies": {
+    "http-server": "^0.9.0"
+  }
+}
