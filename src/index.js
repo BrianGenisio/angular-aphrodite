@@ -1,7 +1,7 @@
 import angular from 'angular';
 import { StyleSheet, css } from 'aphrodite';
 
-const MODULE_NAME = 'aphrodite';
+const MODULE_NAME = 'angular-aphrodite';
 
 function cssFilter() {
     return function(styles) {
