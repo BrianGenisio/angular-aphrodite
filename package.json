@@ -1,0 +1,48 @@
+{
+  "name": "angular-aphrodite",
+  "version": "0.0.1",
+  "description": "Inline styles in Angular that just work (TM)",
+  "keywords": [
+    "css",
+    "angular",
+    "inline-styles",
+    "aphrodite"
+  ],
+  "main": "lib/index.js",
+  "scripts": {
+    "prebuild": "rimraf dist lib",
+    "build": "npm-run-all --parallel build:*",
+    "watch:build": "npm-run-all --parallel watch:build:*",
+    "build:main": "babel -d lib/ src",
+    "watch:build:main": "npm run build:main -- --watch",
+    "build:umd": "webpack --output-library-target umd --output-library aphrodite --output-filename aphrodite.umd.js --devtool source-map",
+    "watch:build:umd": "npm run build:umd -- --watch",
+    "build:umdmin": "webpack --output-library-target umd --output-library aphrodite --output-filename aphrodite.umd.min.js -p --devtool source-map",
+    "watch:build:umdmin": "npm run build:umdmin -- --watch",
+    "build:commonjs": "webpack --output-library-target commonjs2 --output-filename aphrodite.js",
+    "watch:build:commonjs": "npm run build:commonjs -- --watch",
+    "version": "npm run build && git add dist"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/briangenisio/aphrodite-angular.git"
+  },
+  "author": "Jamie Wong",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/briangenisio/aphrodite-angular/issues"
+  },
+  "homepage": "https://github.com/briangenisio/aphrodite-angular",
+  "devDependencies": {
+    "babel": "^5.8.23",
+    "babel-core": "^5.8.25",
+    "babel-loader": "^5.3.2",
+    "npm-run-all": "^1.7.0",
+    "rimraf": "^2.5.2",
+    "webpack": "^1.12.2"
+  },
+  "dependencies": {
+    "angular": "^1.5.7",
+    "aphrodite": "^0.4.1"
+  }
+}
