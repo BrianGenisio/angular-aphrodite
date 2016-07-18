@@ -1,4 +1,4 @@
-const styles = aphrodite.StyleSheet.create({
+var styles = aphrodite.StyleSheet.create({
     a: {
         color: '#03A9F4',
         ':visited': {
