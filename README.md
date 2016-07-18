@@ -72,7 +72,7 @@ angular.module('app', ['angular-aphrodite']);
 ```
 
 ## Examples
-- [UMD](examples/umd)
-- [CommondJS](examples/commonjs)
+- [UMD](example/umd)
+- [CommonJS](example/commonjs)
 
 
