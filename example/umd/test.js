@@ -1,6 +1,9 @@
 const styles = aphrodite.StyleSheet.create({
     a: {
-        color: '03A9F4'
+        color: '#03A9F4',
+        ':visited': {
+            color: '#0099E4'
+        }
     },
 
     main: {
@@ -37,20 +40,12 @@ const styles = aphrodite.StyleSheet.create({
     }
 });
 
-
-
-function AppCtrl() {
-    this.url = 'https://github.com/Khan/aphrodite';
-    this.styles = styles;
-}
-
-
 angular.module('app', ['angular-aphrodite'])
-    .directive('app', function() {
+    .directive('test', function() {
         return {
-            templateUrl: './app.html',
-            controller: 'AppCtrl',
-            controllerAs: 'app'
+            templateUrl: './test.html',
+            controller: function($scope) {
+                $scope.styles = styles;
+            }
         }
-    })
-    .controller('AppCtrl', AppCtrl);
+    });

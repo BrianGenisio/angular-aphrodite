@@ -1,0 +1,32 @@
+<main css="styles.main">
+    <h1>Hello from Angular-Aphrodite!</h1>
+
+    <img src="img/logo.png">
+
+    <div>
+        <span ng-class="styles.red | css">
+            This is red.
+        </span>
+        <span css="styles.hover">
+            This turns red on hover.
+        </span>
+        <span ng-class="styles.small | css">
+            This turns red when the browser is less than 600px width.
+        </span>
+        <span css="[styles.red, styles.blue]">
+            This is blue.
+        </span>
+        <span ng-class="[styles.blue, styles.small] | css">
+            This is blue and turns red when the browser is less than
+            600px width.
+        </span>
+        <button ng-click="toggle = !toggle">
+            <span css="toggle ? styles.blue : styles.red">Toggle</span>
+        </button>
+    </div>
+
+</main>
+<footer css="styles.footer">
+    <a href="https://github.com/Khan/aphroditex" css="styles.a">Aphrodite</a> --
+    <a href="https://github.com/briangenisio/angular-aphrodite" css="styles.a">Angular bindings for Aphrodite</a>
+</footer>
